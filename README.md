@@ -1,38 +1,55 @@
-# Projet Galaga - Jeu Java
+# Galaga Project – Java Game
 
-Membres du monôme :
+**Author:** Erwann Jouet  
 
-- Jouet Erwann
+A modern Java remake of the classic arcade game **Galaga**, where the player controls a spaceship to defeat waves of enemies while dodging their attacks. The game features multiple levels, a scoring system, player respawn, and temporary invincibility mechanics.
 
-Description du projet :
-Ce projet est une réplique du jeu Galaga. Le joueur contrôle un vaisseau spatial pour éliminer des vagues d'ennemis tout en évitant leurs tirs. Le projet inclut plusieurs niveaux, un système de score et de highscore, ainsi que des fonctionnalités de respawn et d'invincibilité après une perte de vie.
+---
 
-Fonctionnalités réalisées :
+## Features
 
-- Déplacement du joueur (flèches gauche/droite)
-- Tir du joueur (touche ESPACE)
-- Ennemis avec différents types (Bee, Butterfly, Moth, Boss)
-- Attaques aléatoires des ennemis et collisions avec le joueur
-- Gestion des missiles ennemis et du joueur
-- Système de vies et respawn du joueur
-- Calcul du score et sauvegarde du meilleur score
-- Multiples niveaux chargés depuis des fichiers `.lvl`
-- Affichage des sprites du joueur, ennemis et niveaux via `StdDraw`
-- Écrans de transition de niveaux, écran titre et écran de victoire
-- Limitation du tir avec cooldown et nombre maximal de missiles
+### Core Gameplay
+- **Player Movement:** Move left and right using arrow keys.  
+- **Shooting:** Fire missiles using the SPACE key.  
+- **Enemy Types:** Various enemies including Bee, Butterfly, Moth, and Boss.  
+- **Enemy Behavior:** Random attacks and collision detection with the player.  
+- **Missile Management:** Handles both enemy and player projectiles.  
+- **Lives System:** Player has 3 lives with respawn mechanics.  
 
-Fonctionnalités supplémentaires :
+### Game Mechanics
+- **Scoring:** Tracks player score and saves high scores.  
+- **Levels:** Multiple levels loaded dynamically from `.lvl` files.  
+- **Cooldowns:** Shooting has a cooldown and maximum number of missiles.  
+- **Temporary Invincibility:** Player is invincible briefly after respawn.  
 
-- Effet d'invincibilité temporaire après réapparition
+### Visuals & UI
+- **Sprites:** Player, enemy, and level graphics displayed using `StdDraw`.  
+- **Screens:** Includes level transitions, title screen, and victory screen.  
 
-Guide pour exécuter le projet :
+---
 
-1. Ouvrez le projet dans Visual Studio Code
-2. Vérifiez que le dossier `src` et `ressources` sont présents
-3. Lancez le jeu :
+## Getting Started
+
+### Prerequisites
+- Java 8 or higher installed.  
+- An IDE such as Visual Studio Code or IntelliJ IDEA.  
+
+### Running the Game
+1. Clone or download the repository.  
+2. Ensure the `src` and `resources` folders are present.  
+3. Run the main class:  
+   ```bash
    Run App.java
-4. Commandes de jeu :
-   - Flèche gauche/droite : déplacer le joueur
-   - ESPACE : tirer
-5. Le score et le highscore sont affichés en haut de l’écran
-6. Le joueur a 3 vies par défaut, et les niveaux se succèdent automatiquement
+
+### Controls
+
+Arrow Left/Right: Move the spaceship
+SPACE: Fire missiles
+The score and highscore are displayed at the top of the screen. Levels progress automatically, and the player starts with 3 lives.
+
+### Project Structure
+
+GalagaProject/ <br>
+├── src/           # Java source files <br>
+├── resources/     # Level files, sprites, and assets <br>
+└── README.md      # Project documentation
