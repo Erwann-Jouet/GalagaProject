@@ -1,0 +1,49 @@
+IAGenerative.txt
+
+Auteur : Jouet Erwann  
+IA utilisées : ChatGPT GPT-5 mini, DeepSeek
+
+Résumé détaillé de l’utilisation des IA génératives :
+
+Nota Bene : Les endroits majeurs où la/les IA génératives ont été utilisées sont indiqués dans le code par un
+            "@IAGENERATIVE", avec un courtes explications du problème rencontre en dessous.
+
+1. Méthodes et classes où les IA ont été utilisées
+    
+    - **getColumns()**  
+        @IAGENERATIVE  
+        Cette méthode organise les ennemis en colonnes selon leur position horizontale.  
+        Problème rencontré : j’avais du mal à récupérer correctement la ligne d’ennemis du bas sans provoquer de bug lors de l’exécution du jeu.  
+        Aide des IA : ChatGPT/DeepSeek m’a expliqué comment créer une structure de colonnes et vérifier la proximité horizontale des ennemis pour les regrouper correctement.
+
+    - **handleCollisions()**  
+        @IAGENERATIVE  
+        Gère toutes les collisions dans le jeu :  
+        - missiles du joueur sur ennemis,  
+        - missiles ennemis sur joueur,  
+        - collisions directes joueur <-> ennemis.  
+        Problème rencontré : beaucoup d’interactions simultanées à gérer.  
+        Aide des IA : ChatGPT/DeepSeek a aidé à organiser la méthode étape par étape et structurer La méthode pour avoir une ligne directrice claire. 
+
+    - **loadLevel(String levelFileName, Player player)**  
+        @IAGENERATIVE  
+        Charge un niveau depuis un fichier et crée les ennemis correspondants.  
+        Problème rencontré : je ne savais pas comment commencer, lire correctement le fichier, récupérer les données ennemis et gérer les erreurs.  
+        Aide des IA : ChatGPT/DeepSeek a proposé la structure générale de lecture du fichier, récupération des informations ennemis et conversions de types, ainsi que la gestion des exceptions et valeurs par défaut.  
+        Remarque : cette méthode a été réalisée en majeure partie avec l’aide de l’IA, j'étais bloqué dans le projet sans cette méthode. C'est la seule méthode réalisée autant par l'IA.
+
+    - **drawSprite(Sprite sprite, double posX, double posY, double size)**  
+        @IAGENERATIVE  
+        Dessine un sprite à l’écran en fonction de sa taille et de sa position.  
+        Problème rencontré : calcul précis de la taille des pixels et de leur position à l’écran.  
+        Aide des IA : ChatGPT/DeepSeek a fourni la logique mathématique pour positionner correctement chaque pixel. 
+
+2. Autres utilisations ponctuelles des IA  
+    - J’ai utilisé ChatGPT/DeepSeek et DeepSeek pour des calculs mathématiques complexes qui bloquaient ma progression.  
+        Exemple concret : le calcul du tir du boss à 180° vers le bas. Ce calcul était nécessaire pour déterminer la trajectoire exacte, mais il ne changeait en rien la logique de la classe ni l’idée globale du tir.  
+    - Ces interventions ont uniquement aidé à obtenir des valeurs correctes, sans modifier la structure ou la logique de mes méthodes.
+
+3. Remarques générales  
+    - Les IA ont servi uniquement comme aide ponctuelle pour lever des blocages ou expliquer certaines logiques, ainsi que fournir il ligne directrice avec des consignes étape par étape mais sans code.   
+    - Toutes les réponses fournies par les IA ont été vérifiées, adaptées et testées pour correspondre à ma logique et aux besoins du projet.  
+    - Aucune partie majeure du projet n’a été entièrement générée par une IA, sauf la méthode `loadLevel` qui a été réalisée en majeure partie avec son aide, mais adaptée par mes soins.
